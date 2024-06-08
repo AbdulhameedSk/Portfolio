@@ -10,6 +10,10 @@
 
 @media (min-width: 450px) {
   .responsive-text::before {
-    content: "SHAIK ";
+    content: "SHAIK ABDULHAMEED";
+    font-size: 60px;
+  }
+  .responsive-text{
+    content: "ABDULHAMEED";
   }
 }
