@@ -1,7 +1,5 @@
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/pfp-bgrm.png";
-
-// import profilePic from "../assets/kevinRushProfile.png";
 import { useEffect, useState } from "react";
 const Hero = () => {
     const [heroText, setHeroText] = useState("ABDULHAMEED");
