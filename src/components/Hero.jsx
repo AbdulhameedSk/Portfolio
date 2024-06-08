@@ -2,24 +2,24 @@ import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/pfp-bgrm.png";
 import { useEffect, useState } from "react";
 const Hero = () => {
-    const [heroText, setHeroText] = useState("ABDULHAMEED");
+  const [heroText, setHeroText] = useState("ABDULHAMEED");
 
-    const handleResize = () => {
-      if (window.innerWidth >= 450) {
-        setHeroText("");
-      } else {
-        setHeroText("ABDULHAMEED");
-      }
+  const handleResize = () => {
+    if (window.innerWidth >= 450) {
+      setHeroText("");
+    } else {
+      setHeroText("ABDULHAMEED");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
-  
-    useEffect(() => {
-      window.addEventListener("resize", handleResize);
-      handleResize();
-  
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
+  }, []);
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-36">
       <div className="flex flex-wrap">
